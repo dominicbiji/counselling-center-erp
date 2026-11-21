@@ -29,7 +29,7 @@ export default function ReceptionistDashboard(){
     async function getAppointments(){
         try{
             const token=localStorage.getItem("token")
-            const res=await axios.get("http://localhost:5050/appointment/getAppointment",{
+            const res=await axios.get("https://erp-black-eight.vercel.app/appointment/getAppointment",{
                 headers:{
                     Authorization:`Bearer ${token}`
                 }
@@ -45,7 +45,7 @@ export default function ReceptionistDashboard(){
     async function getClients(){
         try{
             const token=localStorage.getItem("token")
-            const res=await axios.get("http://localhost:5050/client/read",{
+            const res=await axios.get("https://erp-black-eight.vercel.app/client/read",{
                 headers:{
                     Authorization:`Bearer ${token}`
                 }
@@ -61,7 +61,7 @@ export default function ReceptionistDashboard(){
     async function getCounsellors(){
         try{
             const token=localStorage.getItem("token")
-            const res=await axios.get("http://localhost:5050/counsellor/getcounsellor",{
+            const res=await axios.get("https://erp-black-eight.vercel.app/counsellor/getcounsellor",{
                 headers:{
                     Authorization:`Bearer ${token}`
                 }
@@ -79,7 +79,7 @@ export default function ReceptionistDashboard(){
     try {
         const token = localStorage.getItem("token")
 
-        const response = await axios.get("http://localhost:5050/admin/dashboard",
+        const response = await axios.get("https://erp-black-eight.vercel.app/admin/dashboard",
             {
                 headers: {
                     Authorization: `Bearer ${token}`

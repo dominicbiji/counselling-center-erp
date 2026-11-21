@@ -45,7 +45,7 @@ export default function Appointmentpage(){
     async function getClients(){
         try{
             const token=localStorage.getItem("token")
-            const res= await axios.get("http://localhost:5050/client/read",{
+            const res= await axios.get("https://erp-black-eight.vercel.app/client/read",{
                 headers:{
                     Authorization:`Bearer ${token}`
                 }
@@ -59,7 +59,7 @@ export default function Appointmentpage(){
     async function getServices(){
         try{
             const token=localStorage.getItem("token")
-            const res=await axios.get("http://localhost:5050/service/getservice",{
+            const res=await axios.get("https://erp-black-eight.vercel.app/service/getservice",{
                  headers:{
                     Authorization:`Bearer ${token}`
                 }
@@ -90,7 +90,7 @@ export default function Appointmentpage(){
     async function getCounsellors(){
         try{
             const token=localStorage.getItem("token")
-            const res=await axios.get("http://localhost:5050/counsellor/getcounsellor",{
+            const res=await axios.get("https://erp-black-eight.vercel.app/counsellor/getcounsellor",{
                 headers:{
                     Authorization:`Bearer ${token}`
                 }
@@ -106,7 +106,7 @@ export default function Appointmentpage(){
         e.preventDefault()
         try{
          const token=localStorage.getItem("token")
-         const res=await axios.post("http://localhost:5050/appointment/addAppointment",{
+         const res=await axios.post("https://erp-black-eight.vercel.app/appointment/addAppointment",{
                 clientId:client,
                 counsellorId:counsellor,
                 date:date,
@@ -136,7 +136,7 @@ export default function Appointmentpage(){
     async function getAppointment(){
         try{
             const token=localStorage.getItem("token")
-            const res=await axios.get("http://localhost:5050/appointment/getAppointment",{
+            const res=await axios.get("https://erp-black-eight.vercel.app/appointment/getAppointment",{
                 headers:{
                     Authorization:`Bearer ${token}`
                 }
@@ -151,7 +151,7 @@ export default function Appointmentpage(){
     async function updateAppointment(id){
         try{
             const token=localStorage.getItem("token")
-            const res=await axios.put(`http://localhost:5050/appointment/updateAppointment/${id}`,{
+            const res=await axios.put(`https://erp-black-eight.vercel.app/appointment/updateAppointment/${id}`,{
                 clientId: editClient,
                 counsellorId: editCounsellor,
                 date: editDate,
@@ -178,7 +178,7 @@ export default function Appointmentpage(){
     async function cancelAppointment(id){
         try{
             const token=localStorage.getItem("token")
-            const res=await axios.put(`http://localhost:5050/appointment/cancelAppointment/${id}`,null,{
+            const res=await axios.put(`https://erp-black-eight.vercel.app/appointment/cancelAppointment/${id}`,null,{
                  headers:{
                     Authorization:`Bearer ${token}`
                 }

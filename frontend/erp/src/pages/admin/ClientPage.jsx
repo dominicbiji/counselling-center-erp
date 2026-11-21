@@ -37,7 +37,7 @@
 //     },[])
 
 //     async function getClients(){
-//         const response=await axios.get("http://localhost:5050/client/read")
+//         const response=await axios.get("https://erp-black-eight.vercel.app/client/read")
 //         setClients(response.data)
 //         console.log(clients)
 //     }
@@ -63,7 +63,7 @@
 //         e.preventDefault()
         
 //         try{
-//             const response=await axios.put(`http://localhost:5050/client/${id}`,{
+//             const response=await axios.put(`https://erp-black-eight.vercel.app/client/${id}`,{
 //                 name: editClientName,
 //                 dateOfBirth: editClientDob,
 //                 gender: editClientGender,
@@ -90,7 +90,7 @@
 //         const token = localStorage.getItem("token")
 //         try{
 //             console.log("sending req")
-//              const response=await axios.post("http://localhost:5050/client/create",{
+//              const response=await axios.post("https://erp-black-eight.vercel.app/client/create",{
 //             name: clientName,
 //                 dateOfBirth: clientDOb,
 //                 gender: clientGender,
@@ -117,7 +117,7 @@
 
 //      async function handleDelete(id) {
 //         try {
-//             const res = await axios.delete(`http://localhost:5050/client/${id}`)
+//             const res = await axios.delete(`https://erp-black-eight.vercel.app/client/${id}`)
 //             alert(res.data)
 //             getClients()
 //         } catch (error) {
@@ -252,7 +252,7 @@ export default function ClientPage(){
             const token = localStorage.getItem("token")
 
         const response = await axios.get(
-            "http://localhost:5050/counsellor/getcounsellor",
+            "https://erp-black-eight.vercel.app/counsellor/getcounsellor",
             {
                 headers: {
                     Authorization: `Bearer ${token}`
@@ -270,7 +270,7 @@ export default function ClientPage(){
     try {
         const token = localStorage.getItem("token")
 
-        const response = await axios.get("http://localhost:5050/client/read",
+        const response = await axios.get("https://erp-black-eight.vercel.app/client/read",
             {
                 headers: {
                     Authorization: `Bearer ${token}`
@@ -306,7 +306,7 @@ export default function ClientPage(){
         
         try{
             const token=localStorage.getItem("token")
-            const response=await axios.put(`http://localhost:5050/client/${id}`,{
+            const response=await axios.put(`https://erp-black-eight.vercel.app/client/${id}`,{
                 name: editClientName,
                 password:editClientPass,
                 dateOfBirth: editClientDob,
@@ -342,7 +342,7 @@ export default function ClientPage(){
 
         try{
             const response=await axios.post(
-                "http://localhost:5050/client/create",
+                "https://erp-black-eight.vercel.app/client/create",
                 {
                     name: clientName,
                     password:clientPassword,
@@ -376,7 +376,7 @@ export default function ClientPage(){
     async function handleDelete(id) {
         try {
             const token=localStorage.getItem("token")
-            const res = await axios.delete(`http://localhost:5050/client/${id}`,{
+            const res = await axios.delete(`https://erp-black-eight.vercel.app/client/${id}`,{
                 
             headers: {
             Authorization: `Bearer ${token}`

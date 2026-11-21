@@ -20,7 +20,7 @@ const nav=useNavigate()
     async function getClients(){
         try{
             const token=localStorage.getItem("token")
-            const res=await axios.get("http://localhost:5050/client/read",{
+            const res=await axios.get("https://erp-black-eight.vercel.app/client/read",{
                 headers:{
                     Authorization:`Bearer ${token}`
                 }

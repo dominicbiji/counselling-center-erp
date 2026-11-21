@@ -19,7 +19,7 @@ const nav=useNavigate()
         async function getCounsellors(){
             try{
                 const token=localStorage.getItem("token")
-                const res=await axios.get("http://localhost:5050/counsellor/getcounsellor",{
+                const res=await axios.get("https://erp-black-eight.vercel.app/counsellor/getcounsellor",{
                     headers:{
                         Authorization:`Bearer ${token}`
                     }

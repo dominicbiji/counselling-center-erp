@@ -18,7 +18,7 @@ export default function ClientApp(){
         async function fetchAppointment(){
             try{
                 const token=localStorage.getItem("token")
-                 const response = await axios.get("http://localhost:5050/appointment/clientAppointment",
+                 const response = await axios.get("https://erp-black-eight.vercel.app/appointment/clientAppointment",
                 {
                     headers: {
                         Authorization: `Bearer ${token}`

@@ -15,7 +15,7 @@ export default function ForgotPassword() {
             setLoading(true)
             setMessage("")
 
-            const response = await axios.post("http://localhost:5050/user/forgot-password",{ 
+            const response = await axios.post("https://erp-black-eight.vercel.app/user/forgot-password",{ 
                 email: email 
             })
 

@@ -25,7 +25,7 @@ export default function ResetPassword() {
             setMessage("")
 
             const response = await axios.post(
-                "http://localhost:5050/user/reset-password",
+                "https://erp-black-eight.vercel.app/user/reset-password",
                 {
                     token: token,
                     password: password

@@ -30,7 +30,7 @@ export default function ServiceManagement(){
         try {
             const token = localStorage.getItem("token");
 
-            const res = await axios.get("http://localhost:5050/service/getservice",{
+            const res = await axios.get("https://erp-black-eight.vercel.app/service/getservice",{
                     headers: {
                         Authorization: `Bearer ${token}`
                     }
@@ -64,7 +64,7 @@ async function handleUpdateService(e) {
         const token = localStorage.getItem("token");
 
         await axios.put(
-            `http://localhost:5050/service/updateservice/${editId}`,{
+            `https://erp-black-eight.vercel.app/service/updateservice/${editId}`,{
                 name: editName.trim(),
                 description: editDescription.trim(),
                 fee: Number(editFee)
@@ -103,7 +103,7 @@ async function handleAddService(e) {
     try {
         const token = localStorage.getItem("token")
 
-        const res = await axios.post("http://localhost:5050/service/addservice",
+        const res = await axios.post("https://erp-black-eight.vercel.app/service/addservice",
             {
                 name: name.trim(),
                 description: description.trim(),

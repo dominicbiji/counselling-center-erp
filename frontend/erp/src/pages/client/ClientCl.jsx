@@ -17,7 +17,7 @@ const [client,setClient]=useState(null)
     async function fetchClient(){
         try{
             const token=localStorage.getItem("token")
-            const response=await axios.get("http://localhost:5050/client/account",{
+            const response=await axios.get("https://erp-black-eight.vercel.app/client/account",{
             headers:{
                 Authorization:`Bearer ${token}`
             }
@@ -33,7 +33,7 @@ const [client,setClient]=useState(null)
     async function fetchAppointment(){
         try{
             const token=localStorage.getItem("token")
-             const response = await axios.get("http://localhost:5050/appointment/clientAppointment",
+             const response = await axios.get("https://erp-black-eight.vercel.app/appointment/clientAppointment",
             {
                 headers: {
                     Authorization: `Bearer ${token}`

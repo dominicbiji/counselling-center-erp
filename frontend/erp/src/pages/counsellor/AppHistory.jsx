@@ -14,7 +14,7 @@ export default function AppHistory(){
     async function fetchAppointments(){
         try{
             const token=localStorage.getItem("token")
-            const res=await axios.get("http://localhost:5050/appointment/history",{
+            const res=await axios.get("https://erp-black-eight.vercel.app/appointment/history",{
                 headers:{
                     Authorization:`Bearer ${token}`
                 }

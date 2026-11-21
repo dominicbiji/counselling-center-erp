@@ -20,7 +20,7 @@ export default function CounterPayments(){
     async function fetchBills(){
         try{
             const token=localStorage.getItem("token")
-            const res=await axios.get("http://localhost:5050/bill/fetchAllBill",{
+            const res=await axios.get("https://erp-black-eight.vercel.app/bill/fetchAllBill",{
             headers:{
                 Authorization:`Bearer ${token}`
             }
@@ -44,7 +44,7 @@ export default function CounterPayments(){
         }
 
             const token = localStorage.getItem("token")
-            const res = await axios.post("http://localhost:5050/payment/CounterPay",{
+            const res = await axios.post("https://erp-black-eight.vercel.app/payment/CounterPay",{
                 billId: selectedBill._id,
                 amount: Number(paymentAmount),
                 paymentMethod: "cash"

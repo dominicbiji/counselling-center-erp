@@ -39,7 +39,7 @@ export default function ClientDashboard(){
         const token = localStorage.getItem("token")
 
         const res = await axios.get(
-            "http://localhost:5050/notification/getNot",
+            "https://erp-black-eight.vercel.app/notification/getNot",
             {
                 headers: {
                     Authorization: `Bearer ${token}`
@@ -57,7 +57,7 @@ export default function ClientDashboard(){
     async function fetchClient(){
         try{
             const token=localStorage.getItem("token")
-            const response=await axios.get("http://localhost:5050/client/account",{
+            const response=await axios.get("https://erp-black-eight.vercel.app/client/account",{
             headers:{
                 Authorization:`Bearer ${token}`
             }
@@ -73,7 +73,7 @@ export default function ClientDashboard(){
     async function fetchAppointment(){
         try{
             const token=localStorage.getItem("token")
-             const response = await axios.get("http://localhost:5050/appointment/clientAppointment",
+             const response = await axios.get("https://erp-black-eight.vercel.app/appointment/clientAppointment",
             {
                 headers: {
                     Authorization: `Bearer ${token}`
@@ -91,7 +91,7 @@ export default function ClientDashboard(){
     async function fetchAppointmentHistory(){
         try{
             const token=localStorage.getItem("token")
-             const response = await axios.get("http://localhost:5050/appointment/clientSession",
+             const response = await axios.get("https://erp-black-eight.vercel.app/appointment/clientSession",
             {
                 headers: {
                     Authorization: `Bearer ${token}`
@@ -108,7 +108,7 @@ export default function ClientDashboard(){
         console.log("its working")
         try{
             const token=localStorage.getItem("token")
-            const res=await axios.get("http://localhost:5050/bill/getBill",{
+            const res=await axios.get("https://erp-black-eight.vercel.app/bill/getBill",{
                 headers:{
                     Authorization:`Bearer ${token}`
                 }
@@ -151,7 +151,7 @@ export default function ClientDashboard(){
             
         try{
             const token=localStorage.getItem("token")
-            const res=await axios.post("http://localhost:5050/payment/createPayment",{
+            const res=await axios.post("https://erp-black-eight.vercel.app/payment/createPayment",{
                 billId:bill._id,
                 amount:amount
             },
@@ -178,7 +178,7 @@ export default function ClientDashboard(){
                     razorpay_payment_id: response.razorpay_payment_id,
                     razorpay_signature: response.razorpay_signature
                 }
-                const verifyRes=await axios.post("http://localhost:5050/payment/verifyPayment", verifyData,
+                const verifyRes=await axios.post("https://erp-black-eight.vercel.app/payment/verifyPayment", verifyData,
                    
                 {
                     headers: {

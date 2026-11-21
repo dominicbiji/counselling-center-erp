@@ -32,7 +32,7 @@ export default function ReceptionistPage(){
     async function fetchReceptionists(){
         try{
             const token=localStorage.getItem("token")
-            const response= await axios.get("http://localhost:5050/receptionist/getreceptionist",{
+            const response= await axios.get("https://erp-black-eight.vercel.app/receptionist/getreceptionist",{
                 headers:{
                     Authorization:`Bearer ${token}`
                 }
@@ -48,7 +48,7 @@ export default function ReceptionistPage(){
         e.preventDefault()
         try{
             const token=localStorage.getItem("token")
-        const response= await axios.post("http://localhost:5050/receptionist/addReceptionist",{
+        const response= await axios.post("https://erp-black-eight.vercel.app/receptionist/addReceptionist",{
             name: receptionistName,
             email: receptionistEmail,
             password: receptionistPassword,
@@ -85,7 +85,7 @@ async function updateReceptionist(e,id){
     e.preventDefault()
     try{
          const token=localStorage.getItem("token")
-     const res=await axios.put(`http://localhost:5050/receptionist/updateReceptionist/${id}`,{
+     const res=await axios.put(`https://erp-black-eight.vercel.app/receptionist/updateReceptionist/${id}`,{
         name: editReceptionistName,
         email: editReceptionistEmail,
         phone: editReceptionistPhone,
@@ -109,7 +109,7 @@ async function updateReceptionist(e,id){
 async function deleteReceptionist(id){
     try{
         const token=localStorage.getItem("token")
-    const res= await axios.delete(`http://localhost:5050/receptionist/deleteReceptionist/${id}`,{
+    const res= await axios.delete(`https://erp-black-eight.vercel.app/receptionist/deleteReceptionist/${id}`,{
         headers:{
             Authorization:`Bearer ${token}`
         }

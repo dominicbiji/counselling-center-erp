@@ -21,7 +21,7 @@ useEffect(()=>{
         try{
             
             const token=localStorage.getItem("token")
-            const res= await axios.get(`http://localhost:5050/appointment/viewApp/${id}`,{
+            const res= await axios.get(`https://erp-black-eight.vercel.app/appointment/viewApp/${id}`,{
                 headers:{
                     Authorization:`Bearer ${token}`
                 }
@@ -42,7 +42,7 @@ async function saveNotes() {
         const token = localStorage.getItem("token")
 
         const res = await axios.put(
-            `http://localhost:5050/appointment/updateNotes/${id}`,
+            `https://erp-black-eight.vercel.app/appointment/updateNotes/${id}`,
             {
                 notes: notes
             },
@@ -64,7 +64,7 @@ async function completeSession() {
         const token = localStorage.getItem("token")
 
         const res = await axios.put(
-            `http://localhost:5050/appointment/updateStatus/${id}`,
+            `https://erp-black-eight.vercel.app/appointment/updateStatus/${id}`,
             {
                 status: "completed"
             },

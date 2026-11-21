@@ -12,7 +12,7 @@ export default function RegisterPage(){
 
      async function handleRegister(){
             try{
-                const response= await axios.post("http://localhost:5050/user/register",{
+                const response= await axios.post("https://erp-black-eight.vercel.app/user/register",{
                     name:name,
                     email:email,
                     password:password

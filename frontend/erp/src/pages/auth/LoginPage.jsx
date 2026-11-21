@@ -10,7 +10,7 @@ export default function LoginPage(){
 
     async function handleLogin(){
        try{
-        const response= await axios.post("http://localhost:5050/user/login",{
+        const response= await axios.post("https://erp-black-eight.vercel.app/user/login",{
             email:email,
             password:password
         })
@@ -20,7 +20,7 @@ export default function LoginPage(){
         if(response.data.success){
             localStorage.setItem("token",response.data.authtoken)
             const token=localStorage.getItem("token")
-            const tk= await axios.get("http://localhost:5050/user/profile",{
+            const tk= await axios.get("https://erp-black-eight.vercel.app/user/profile",{
                 headers:{
                     Authorization:`Bearer ${token}`
                 }

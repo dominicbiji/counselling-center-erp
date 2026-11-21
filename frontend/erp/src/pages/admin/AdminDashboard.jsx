@@ -20,7 +20,7 @@ async function fetchDashboard() {
     try {
         const token = localStorage.getItem("token")
 
-        const response = await axios.get("http://localhost:5050/admin/dashboard",
+        const response = await axios.get("https://erp-black-eight.vercel.app/admin/dashboard",
             {
                 headers: {
                     Authorization: `Bearer ${token}`

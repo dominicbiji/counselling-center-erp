@@ -16,7 +16,7 @@ export default function CounsellorCl(){
 
     async function fetchClients(){
         const token=localStorage.getItem("token")
-        const response=await axios.get("http://localhost:5050/client/myClients",{
+        const response=await axios.get("https://erp-black-eight.vercel.app/client/myClients",{
             headers: {
                     Authorization: `Bearer ${token}`
                 }

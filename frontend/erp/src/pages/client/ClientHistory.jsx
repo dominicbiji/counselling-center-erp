@@ -20,7 +20,7 @@ useEffect(()=>{
      async function fetchAppointmentHistory(){
         try{
             const token=localStorage.getItem("token")
-             const response = await axios.get("http://localhost:5050/appointment/clientSession",
+             const response = await axios.get("https://erp-black-eight.vercel.app/appointment/clientSession",
             {
                 headers: {
                     Authorization: `Bearer ${token}`

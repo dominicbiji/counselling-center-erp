@@ -8,7 +8,7 @@ const [user,setUser]=useState(null)
     async function getProfile(){
         try{
             const token =localStorage.getItem("token")
-            const response= await axios.get("http://localhost:5050/user/profile",{
+            const response= await axios.get("https://erp-black-eight.vercel.app/user/profile",{
                 headers:{
                     Authorization:`Bearer ${token}`
                 }

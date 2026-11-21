@@ -32,7 +32,7 @@ useEffect(()=>{
 async function fetchCounsellors(){
     try{
         const token = localStorage.getItem("token")
-        const response=await axios.get("http://localhost:5050/counsellor/getcounsellor",{
+        const response=await axios.get("https://erp-black-eight.vercel.app/counsellor/getcounsellor",{
             headers:{
                 Authorization:`Bearer ${token}`
             }
@@ -49,7 +49,7 @@ async function addCounsellor(e){
     e.preventDefault()
     try{
         const token=localStorage.getItem("token")
-        const response=await axios.post("http://localhost:5050/counsellor/addcounsellor",{
+        const response=await axios.post("https://erp-black-eight.vercel.app/counsellor/addcounsellor",{
             name: counsellorName,
             email: counsellorEmail,
             password: counsellorPassword,
@@ -85,7 +85,7 @@ async function updateCounsellor(e,id){
     e.preventDefault()
     try{
         const token = localStorage.getItem("token")
-        const response=await axios.put(`http://localhost:5050/counsellor/updatecounsellor/${id}`,{
+        const response=await axios.put(`https://erp-black-eight.vercel.app/counsellor/updatecounsellor/${id}`,{
             name: editCounsellorName,
             email: editCounsellorEmail,
             phone: editCounsellorPhone,
@@ -111,7 +111,7 @@ async function updateCounsellor(e,id){
 async function deleteCounsellor(id){
     try{
          const token = localStorage.getItem("token")
-        const response=await axios.delete(`http://localhost:5050/counsellor/deletecounsellor/${id}`,{
+        const response=await axios.delete(`https://erp-black-eight.vercel.app/counsellor/deletecounsellor/${id}`,{
             headers:{
                     Authorization:`Bearer ${token}`
                 }

@@ -17,7 +17,7 @@ export default function Notification(){
         const token = localStorage.getItem("token")
 
         await axios.put(
-            `http://localhost:5050/notification/updateNot/${id}`,
+            `https://erp-black-eight.vercel.app/notification/updateNot/${id}`,
             {},
             {
                 headers: {
@@ -44,7 +44,7 @@ export default function Notification(){
         try{
             const token = localStorage.getItem("token")
              console.log("Token exists:", !!token)
-            const res = await axios.get("http://localhost:5050/notification/getNot",
+            const res = await axios.get("https://erp-black-eight.vercel.app/notification/getNot",
             {
                 headers: {
                     Authorization: `Bearer ${token}`

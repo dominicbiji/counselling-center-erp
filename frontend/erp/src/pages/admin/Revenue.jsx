@@ -17,7 +17,7 @@ export default function Revenue(){
     async function fetchRevenue(){
         try{
             const token=localStorage.getItem("token")
-            const res=await axios.get("http://localhost:5050/payment/revenue",{
+            const res=await axios.get("https://erp-black-eight.vercel.app/payment/revenue",{
                 headers:{
                     Authorization:`Bearer ${token}`
                 }

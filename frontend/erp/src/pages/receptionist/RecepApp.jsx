@@ -18,7 +18,7 @@ const nav=useNavigate()
     async function getAppointments(){
         try{
             const token=localStorage.getItem("token")
-            const res=await axios.get("http://localhost:5050/appointment/getAppointment",{
+            const res=await axios.get("https://erp-black-eight.vercel.app/appointment/getAppointment",{
                 headers:{
                     Authorization:`Bearer ${token}`
                 }
