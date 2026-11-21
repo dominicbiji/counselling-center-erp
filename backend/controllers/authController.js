@@ -75,7 +75,7 @@ const forgotPassword = async (req, res) => {
     user.resetPasswordExpires = Date.now() + 15 * 60 * 1000
 
     await user.save()
-    const resetURL = `http://localhost:5173/reset-password/${resetToken}`
+    const resetURL = `https://erp-nbgu.vercel.app/reset-password/${resetToken}`
 
     try {
     await sendEmail(

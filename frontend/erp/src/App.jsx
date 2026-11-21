@@ -4,7 +4,7 @@ import ProfilePage from "./pages/auth/ProfilePage"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import LandingPage from "./pages/public/LandingPage"
 import ForgotPassword from "./pages/auth/ForgotPassword"
-import ResertPassword from "./pages/auth/ResetPassword"
+import ResetPassword from "./pages/auth/ResetPassword"
 
 import AdminDashboard from "./pages/admin/AdminDashboard"
 import ClientPage from "./pages/admin/ClientPage"
